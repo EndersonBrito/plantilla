@@ -18,17 +18,37 @@
       </svg>
     <div class="container">
         <h1>Editor de Imágenes</h1>
-        <input type="file" id="imageUpload" accept="image/*">
+        <button id="upload-button">
+            <p>SUBIR FOTO</p>
+        </button>
+        <input type="file" id="imageUpload" accept="image/*" style="display: none;">
         <div class="frame-container">
             <div id="imageFrame" class="frame heart">
                 <img id="uploadedImage" src="#" alt="Uploaded Image">
             </div>
         </div>
         <div class="controls">
-            <button id="zoomIn">Acercar</button>
-            <button id="zoomOut">Alejar</button>
-            <button id="rotateLeft">Girar Izquierda</button>
-            <button id="rotateRight">Girar Derecha</button>
+            <button id="zoomIn">
+                <svg width="20" height="20" viewBox="0 0 41 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20.833 35C29.1173 35 35.833 28.2843 35.833 20C35.833 11.7157 29.1173 5 20.833 5C12.5487 5 5.83301 11.7157 5.83301 20C5.83301 28.2843 12.5487 35 20.833 35Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M14.583 20H27.083" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                Acercar
+            </button>
+            <button id="zoomOut">
+                <svg width="20" height="20" viewBox="0 0 41 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20.833 35C29.1173 35 35.833 28.2843 35.833 20C35.833 11.7157 29.1173 5 20.833 5C12.5487 5 5.83301 11.7157 5.83301 20C5.83301 28.2843 12.5487 35 20.833 35Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M14.583 20H27.083" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M20.833 13.75V26.25" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                Alejar
+            </button>
+            <button id="rotateLeft">
+                <svg width="20" height="20" viewBox="0 0 41 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" 
+                        clip-rule="evenodd" d="M17.6348 5.59472C20.4839 5.028 23.4371 5.31886 26.1209 6.43053C28.8047 7.54219 31.0985 9.42472 32.7124 11.8401C34.3263 14.2554 35.1877 17.0951 35.1877 20C35.1877 22.9049 34.3263 25.7446 32.7124 28.1599C31.0985 30.5753 28.8047 32.4578 26.1209 33.5695C23.4371 34.6811 20.4839 34.972 17.6348 34.4053C14.7857 33.8386 12.1687 32.4397 10.1146 30.3856C9.74847 30.0195 9.74847 29.4259 10.1146 29.0598C10.4807 28.6937 11.0743 28.6937 11.4404 29.0598C13.2323 30.8517 15.5152 32.0719 18.0006 32.5663C20.486 33.0607 23.0622 32.807 25.4033 31.8372C27.7445 30.8675 29.7456 29.2253 31.1534 27.1183C32.5613 25.0112 33.3127 22.5341 33.3127 20C33.3127 17.4659 32.5613 14.9888 31.1534 12.8818C29.7456 10.7748 27.7445 9.13255 25.4033 8.1628C23.0622 7.19305 20.486 6.93932 18.0006 7.4337C15.5152 7.92807 13.2323 9.14834 11.4404 10.9402L10.804 10.3038L11.4404 10.9402L7.73746 14.6431H12.9741C13.4919 14.6431 13.9116 15.0629 13.9116 15.5806C13.9116 16.0984 13.4919 16.5181 12.9741 16.5181H5.47412C4.95635 16.5181 4.53662 16.0984 4.53662 15.5806V8.08063C4.53662 7.56286 4.95635 7.14313 5.47412 7.14313C5.99189 7.14313 6.41162 7.56286 6.41162 8.08063V13.3173L10.1146 9.61437C10.1146 9.61437 10.1146 9.61437 10.1146 9.61437C12.1687 7.56029 14.7857 6.16144 17.6348 5.59472Z" 
+                        fill="currentColor">
+                    </path>
+                </svg>
+                Girar Izquierda
+            </button>
+            <button id="rotateRight">
+                <svg width="20" height="20" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M17.9997 5.94696C16.0114 5.55146 13.9504 5.75444 12.0775 6.53024C10.2046 7.30604 8.60372 8.61981 7.47744 10.3054C6.35115 11.991 5.75 13.9727 5.75 16C5.75 18.0273 6.35115 20.009 7.47744 21.6946C8.60372 23.3802 10.2046 24.694 12.0775 25.4698C13.9504 26.2456 16.0114 26.4486 17.9997 26.0531C19.988 25.6576 21.8144 24.6813 23.2478 23.2479C23.5407 22.955 24.0156 22.955 24.3085 23.2479C24.6014 23.5407 24.6014 24.0156 24.3085 24.3085C22.6652 25.9518 20.5716 27.0709 18.2923 27.5242C16.013 27.9776 13.6505 27.7449 11.5035 26.8556C9.35644 25.9663 7.52134 24.4602 6.23023 22.528C4.93913 20.5957 4.25 18.3239 4.25 16C4.25 13.6761 4.93913 11.4043 6.23023 9.47205C7.52134 7.53978 9.35644 6.03375 11.5035 5.14442C13.6505 4.25509 16.013 4.0224 18.2923 4.47578C20.5716 4.92915 22.6652 6.04823 24.3085 7.6915L27.2709 10.6539V6.4645C27.2709 6.05029 27.6067 5.71451 28.0209 5.71451C28.4351 5.71451 28.7709 6.05029 28.7709 6.4645V12.4645C28.7709 12.8787 28.4351 13.2145 28.0209 13.2145H22.0209C21.6067 13.2145 21.2709 12.8787 21.2709 12.4645C21.2709 12.0503 21.6067 11.7145 22.0209 11.7145H26.2102L23.2478 8.75216L23.7782 8.22183L23.2478 8.75216C21.8144 7.31867 19.988 6.34245 17.9997 5.94696Z" fill="currentColor" fill-opacity="0.8"></path></svg>
+                Girar Derecha
+            </button>
             <select id="frameShape">
                 <option value="square">Cuadrado</option>
                 <option value="circle">Círculo</option>

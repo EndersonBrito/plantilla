@@ -1,3 +1,7 @@
+document.getElementById("upload-button").addEventListener("click", function() {
+    document.getElementById("imageUpload").click();
+});
+
 document.getElementById('imageUpload').addEventListener('change', function(event) {
     const file = event.target.files[0];
     if (file) {

@@ -1,13 +1,11 @@
 body {
-    font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    background-color: #5454c2; /* Fondo azul oscuro */
     margin: 0;
-    background-color: #f0f0f0;
 }
-
 .container {
     text-align: center;
 }
@@ -46,6 +44,8 @@ body {
     object-fit: cover;
     transform-origin: center;
     cursor: grab;
+    filter: opacity(0.99) brightness(115%) grayscale(1);
+
 }
 
 #uploadedImage:active {
@@ -58,7 +58,6 @@ body {
 
 button {
     margin: 5px;
-    padding: 10px;
     cursor: pointer;
 }
 
