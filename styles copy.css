@@ -1,14 +1,11 @@
 body {
     display: flex;
     justify-content: center;
-    align-items: center;
     height: 100vh;
     background-color: #5454c2; /* Fondo azul oscuro */
     margin: 0;
 }
-.container {
-    text-align: center;
-}
+
 
 .frame-container {
     margin: 20px;
