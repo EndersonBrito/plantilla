@@ -27,15 +27,41 @@ const img = document.getElementById('uploadedImage');
 
 img.addEventListener('mousedown', function(event) {
     event.preventDefault();
-    startX = event.clientX - posX;
-    startY = event.clientY - posY;
+    if (event.type === 'touchstart') {
+        startX = event.touches[0].clientX - posX;
+        startY = event.touches[0].clientY - posY;
+    } else {
+        startX = event.clientX - posX;
+        startY = event.clientY - posY;
+    }
     document.addEventListener('mousemove', onMouseMove);
     document.addEventListener('mouseup', onMouseUp);
+    document.addEventListener('touchmove', onMouseMove);
+    document.addEventListener('touchend', onMouseUp);
 });
 
+img.addEventListener('touchstart', function(event) {
+    event.preventDefault();
+    if (event.type === 'touchstart') {
+        startX = event.touches[0].clientX - posX;
+        startY = event.touches[0].clientY - posY;
+    } else {
+        startX = event.clientX - posX;
+        startY = event.clientY - posY;
+    }
+    document.addEventListener('mousemove', onMouseMove);
+    document.addEventListener('mouseup', onMouseUp);
+    document.addEventListener('touchmove', onMouseMove);
+    document.addEventListener('touchend', onMouseUp);
+});
 function onMouseMove(event) {
-    posX = event.clientX - startX;
-    posY = event.clientY - startY;
+    if (event.type === 'touchstart') {
+        posX = event.touches[0].clientX - startX;
+        posY = event.touches[0].clientY - startY;
+    } else {
+        posX = event.clientX - startX;
+        posY = event.clientY - startY;
+    }
     updateImageTransform();
 }
 
